@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>first</title>
+    <title>Habits Page</title>
     <style>
         body {
             background-color: black;
@@ -9,6 +9,7 @@
             line-height: 1.6;
             margin: 20px;
             color: white;
+            text-align: center;
         }
         h1 {
             color: #4CAF50;
@@ -16,22 +17,69 @@
         ul {
             list-style-type: disc;
             padding-left: 20px;
+            text-align: left;
+            margin: 0 auto;
+            display: inline-block;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .good-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .bad-btn {
+            background-color: #f44336;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h1>10 Good Habits</h1>
-    <ul>
-        <li>Wake up early and start your day with a healthy routine.</li>
-        <li>Exercise regularly to maintain physical fitness.</li>
-        <li>Eat a balanced diet rich in fruits, vegetables, and whole grains.</li>
-        <li>Stay hydrated by drinking plenty of water throughout the day.</li>
-        <li>Practice mindfulness or meditation to reduce stress and improve mental clarity.</li>
-        <li>Read books and stay curious to continue learning and growing.</li>
-        <li>Maintain good hygiene and personal cleanliness.</li>
-        <li>Organize your tasks and set goals to stay productive and focused.</li>
-        <li>Be kind and respectful to others, fostering positive relationships.</li>
-        <li>Get enough sleep to ensure your body and mind are well-rested.</li>
-    </ul>
+    <h1>Welcome!</h1>
+    <p>Click a button to explore good or bad habits.</p>
+    <button class="good-btn" onclick="showGoodHabits()">Show Good Habits</button>
+    <button class="bad-btn" onclick="showBadHabits()">Show Bad Habits</button>
+    <div id="content"></div>
+
+    <script>
+        function showGoodHabits() {
+            document.getElementById("content").innerHTML = `
+                <h2>Good Habits</h2>
+                <ul>
+                    <li>Wake up early and start your day with a healthy routine.</li>
+                    <li>Exercise regularly to maintain physical fitness.</li>
+                    <li>Eat a balanced diet rich in fruits, vegetables, and whole grains.</li>
+                    <li>Stay hydrated by drinking plenty of water throughout the day.</li>
+                    <li>Practice mindfulness or meditation to reduce stress and improve mental clarity.</li>
+                    <li>Read books and stay curious to continue learning and growing.</li>
+                    <li>Maintain good hygiene and personal cleanliness.</li>
+                    <li>Organize your tasks and set goals to stay productive and focused.</li>
+                    <li>Be kind and respectful to others, fostering positive relationships.</li>
+                    <li>Get enough sleep to ensure your body and mind are well-rested.</li>
+                </ul>`;
+        }
+
+        function showBadHabits() {
+            document.getElementById("content").innerHTML = `
+                <h2>Bad Habits</h2>
+                <ul>
+                    <li>Procrastinating important tasks.</li>
+                    <li>Skipping meals or eating unhealthy junk food.</li>
+                    <li>Staying up late and not getting enough sleep.</li>
+                    <li>Spending excessive time on social media.</li>
+                    <li>Overthinking and stressing about things out of your control.</li>
+                    <li>Being unkind or disrespectful to others.</li>
+                    <li>Not exercising or staying physically active.</li>
+                    <li>Ignoring personal hygiene and cleanliness.</li>
+                    <li>Poor time management and lack of organization.</li>
+                    <li>Overindulging in unhealthy habits like smoking or drinking.</li>
+                </ul>`;
+        }
+    </script>
 </body>
 </html>
